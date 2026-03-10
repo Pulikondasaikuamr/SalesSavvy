@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SalesSavvy</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background: linear-gradient(120deg,#1e3c72,#2a5298);
+color:white;
+text-align:center;
+}
+
+.header{
+font-size:35px;
+padding:20px;
+font-weight:bold;
+}
+
+.page{
+display:none;
+padding:40px;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:250px;
+border:none;
+border-radius:5px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:5px;
+background:#ff7e5f;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff5733;
+}
+
+.card-container{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+width:200px;
+}
+
+.nav{
+margin-top:20px;
+}
+
+.nav button{
+margin:5px;
+}
+
+.footer{
+margin-top:50px;
+font-size:14px;
+}
+
+</style>
+
+<script>
+
+function showPage(id){
+document.getElementById("login").style.display="none";
+document.getElementById("register").style.display="none";
+document.getElementById("admin").style.display="none";
+document.getElementById("user").style.display="none";
+
+document.getElementById(id).style.display="block";
+}
+
+</script>
+
+</head>
+
+<body onload="showPage('login')">
+
+<div class="header">
+SalesSavvy
+</div>
+
+<div class="nav">
+<button onclick="showPage('login')">Login</button>
+<button onclick="showPage('register')">Register</button>
+<button onclick="showPage('admin')">Admin Dashboard</button>
+<button onclick="showPage('user')">User Dashboard</button>
+</div>
+
+
+<!-- LOGIN PAGE -->
+<div id="login" class="page">
+
+<h2>Login</h2>
+
+<input type="text" placeholder="Username"><br>
+<input type="password" placeholder="Password"><br>
+
+<button onclick="showPage('user')">Login</button>
+
+</div>
+
+
+<!-- REGISTER PAGE -->
+<div id="register" class="page">
+
+<h2>User Registration</h2>
+
+<input type="text" placeholder="Full Name"><br>
+<input type="email" placeholder="Email"><br>
+<input type="password" placeholder="Password"><br>
+
+<button>Create Account</button>
+
+</div>
+
+
+<!-- ADMIN DASHBOARD -->
+<div id="admin" class="page">
+
+<h2>Admin Dashboard</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Total Sales</h3>
+<p>$5000</p>
+</div>
+
+<div class="card">
+<h3>Total Users</h3>
+<p>120</p>
+</div>
+
+<div class="card">
+<h3>Total Orders</h3>
+<p>85</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- USER DASHBOARD -->
+<div id="user" class="page">
+
+<h2>User Dashboard</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Laptop</h3>
+<p>$800</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>Phone</h3>
+<p>$500</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>Headphones</h3>
+<p>$150</p>
+<button>Buy</button>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="footer">
+Developer: Sai Kumar
+</div>
+
+</body>
+</html>
